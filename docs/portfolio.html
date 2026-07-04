@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Quantitative Finance &amp; AI</title>
+  <meta name="description" content="Quantitative finance and AI projects spanning financial econometrics, portfolio construction, data analytics, and LLM agent design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Site navigation">
+    <div class="nav__inner">
+      <span class="nav__brand">pd0765</span>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Projects</a>
+        <a href="https://github.com/pd0765" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <p class="hero__eyebrow">GitHub Portfolio</p>
+      <h1 class="hero__title" style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Portfolio Projects</h1>
+      <p class="hero__sub" style="margin-bottom: 0;">
+        Quantitative finance and AI research projects — each one independently reproducible, documented to practitioner standards.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="container">
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="econometrics">Econometrics</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio Construction</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Agents</button>
+        <button class="filter-btn" data-filter="data">Data Engineering</button>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <div class="projects-grid">
+
+        <!-- ── FEATURED: CAPM / BL ── -->
+        <article class="card card--featured reveal"
+                 data-category="econometrics portfolio">
+          <p class="card__eyebrow">Featured Project · Financial Econometrics</p>
+          <h2 class="card__title">CAPM &amp; Black-Litterman Implied Returns: An Empirical Demonstration</h2>
+
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat__val">&gt; 0.997</span>
+              <span class="stat__lbl">Absolute correlation — every month</span>
+            </div>
+            <div class="stat">
+              <span class="stat__val">198</span>
+              <span class="stat__lbl">Monthly snapshots</span>
+            </div>
+            <div class="stat">
+              <span class="stat__val">16+ yrs</span>
+              <span class="stat__lbl">S&amp;P 500 data (2006–2022)</span>
+            </div>
+          </div>
+
+          <p class="card__desc">
+            Demonstrates, using over sixteen years of real-world S&amp;P 500 data, that the expected returns
+            implied by CAPM and those implied by the Black-Litterman model (when no investor views are imposed)
+            correlate at greater than 0.997 in absolute value — not as a numerical coincidence, but as a direct
+            consequence of both models sharing the same equilibrium foundation. The finding is validated across
+            198 consecutive monthly snapshots, not a single time period.
+          </p>
+
+          <p class="card__finding">
+            Cross-sectional correlation exceeds 0.997 in absolute value in every one of the 198 months sampled.
+            Sign inversions in 25 months are explained as a mechanical artifact of negative market excess returns,
+            not a substantive disagreement between models.
+          </p>
+
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">statsmodels</span>
+            <span class="tag">pyarrow</span>
+            <span class="tag">OLS</span>
+            <span class="tag">CAPM</span>
+            <span class="tag">Black-Litterman</span>
+            <span class="tag">Portfolio Theory</span>
+          </div>
+
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/capm-black-litterman-equivalence"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── CORPORATE ACTION EVENT STUDY ENGINE ── -->
+        <article class="card reveal"
+                 data-category="econometrics data">
+          <p class="card__eyebrow">Financial Econometrics · Data Engineering</p>
+          <h2 class="card__title">Corporate Action Event Study Engine</h2>
+          <p class="card__desc">
+            Full ETL pipeline for special dividend event studies: ingests a structured event feed, computes
+            cumulative abnormal returns via the market model over a (−1, +5) event window, stores results in
+            Postgres, and generates Claude API narrative summaries. Cross-sectional mean CAR of +1.31% across
+            46 events is directionally consistent with the Michaely, Thaler &amp; Womack (1995) academic benchmark.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">scipy</span>
+            <span class="tag">yfinance</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Event Study</span>
+            <span class="tag">OLS</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/corporate-action-event-study-engine"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── ARCH vs GARCH ── -->
+        <article class="card reveal"
+                 data-category="econometrics">
+          <p class="card__eyebrow">Financial Econometrics · Time Series</p>
+          <h2 class="card__title">ARCH vs. GARCH Volatility Forecasting Study</h2>
+          <p class="card__desc">
+            Five-module pipeline testing whether GARCH(1,1) offers statistically meaningful improvements over
+            ARCH(1) for one-step-ahead conditional variance forecasting across 874 S&amp;P 500 constituents and
+            approximately 20 years of daily return data. Evaluation includes Diebold-Mariano testing,
+            Mincer-Zarnowitz regressions, and regime sub-period analysis.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">arch</span>
+            <span class="tag">statsmodels</span>
+            <span class="tag">pandas</span>
+            <span class="tag">scipy</span>
+            <span class="tag">matplotlib</span>
+            <span class="tag">Time Series</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/ARCH-vs-GARCH-volatility-forecasting-study"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── WEIGHT CAPPING ── -->
+        <article class="card reveal"
+                 data-category="portfolio">
+          <p class="card__eyebrow">Portfolio Construction · Index Methodology</p>
+          <h2 class="card__title">Weight Capping Without Looping</h2>
+          <p class="card__desc">
+            Proves that an analytical closed-form solution to portfolio weight capping — via cutoff-stock
+            identification and proportional scaling — produces identical results to the traditional iterative
+            redistribution procedure. Implemented and verified in both Python and Excel, with equality
+            confirmed programmatically.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">numpy</span>
+            <span class="tag">openpyxl</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Index Construction</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/weight-capping"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── SINGLE AGENT vs MULTI-AGENT ── -->
+        <article class="card reveal"
+                 data-category="ai">
+          <p class="card__eyebrow">LLM Architecture · Agent Design</p>
+          <h2 class="card__title">Single Agent vs. Multi-Agent</h2>
+          <p class="card__desc">
+            Builds a pipeline ingesting live GitHub repo data via the GitHub API and routes it through two
+            competing LLM architectures — an overloaded single agent vs. a specialist crew — to make the
+            "lost in the middle" context degradation phenomenon observable and measurable across objective,
+            verifiable criteria rather than subjective quality judgments.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Anthropic API</span>
+            <span class="tag">PyGithub</span>
+            <span class="tag">pydantic</span>
+            <span class="tag">Multi-Agent</span>
+            <span class="tag">LLM Architecture</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/single-agent-vs-multi-agent"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── PROMPT ENGINEERING ── -->
+        <article class="card reveal"
+                 data-category="ai">
+          <p class="card__eyebrow">Prompt Engineering · LLM Evaluation</p>
+          <h2 class="card__title">Prompt Engineering in Financial Services</h2>
+          <p class="card__desc">
+            Structured experiment testing three prompting strategies — clear instructions, reference text
+            grounding, and chain-of-thought — across three purpose-built agents and 18 logged API runs in an
+            equity index and factor investing context. All outputs preserved as JSON with rubric scoring and
+            token count visualizations.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">Financial Services</span>
+            <span class="tag">LLM Evaluation</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/prompt-engineering"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── STRESS TESTING FINANCIAL AGENT ── -->
+        <article class="card reveal"
+                 data-category="ai data">
+          <p class="card__eyebrow">LLM Evaluation · Stress Testing</p>
+          <h2 class="card__title">Stress Testing a Financial Agent</h2>
+          <p class="card__desc">
+            Collaborative multi-round study measuring LLM instruction-following reliability across accumulating
+            system prompt rule stacks (T3–T7) and eight varied user prompts drawn from all 30 DJIA tickers.
+            Key finding: non-monotonic failure curve — T7 outperformed T5 — challenging the standard
+            cumulative-failure assumption. Judge model: <span class="mono">claude-opus-4-8</span>.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">pandas</span>
+            <span class="tag">LLM Evaluation</span>
+            <span class="tag">Prompt Stress Testing</span>
+            <span class="tag">DJIA</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/stress-testing-financial-agent"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <!-- /projects-grid -->
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__text">Quantitative Finance &amp; AI Projects</span>
+      <div class="footer__links">
+        <a href="https://github.com/pd0765" target="_blank" rel="noopener">GitHub</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
