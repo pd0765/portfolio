@@ -276,6 +276,66 @@
           </div>
         </article>
 
+        <!-- ── LLM NUMERIC REASONING ── -->
+        <article class="card reveal"
+                 data-category="ai">
+          <p class="card__eyebrow">LLM Evaluation · Quantitative Finance</p>
+          <h2 class="card__title">LLM Numeric Reasoning in Financial Calculations</h2>
+          <p class="card__desc">
+            Controlled experiment benchmarking Claude across six conditions — varying platform, tool access,
+            and system prompt — on multi-step financial metric computation (Sharpe, Sortino, Maximum Drawdown)
+            across 20 ETFs spanning 2019–2023. Core finding: tool access is the only variable that matters.
+            Without code execution, the model produces confident, well-formatted output that is wrong 97% of
+            the time. Prompt framing has no measurable effect in either direction.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Anthropic API</span>
+            <span class="tag">Claude Code</span>
+            <span class="tag">LLM Evaluation</span>
+            <span class="tag">Quantitative Finance</span>
+            <span class="tag">ETF Analysis</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/llm-numeric-reasoning-finance"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
+        <!-- ── RAG EARNINGS HALLUCINATION ── -->
+        <article class="card reveal"
+                 data-category="ai data">
+          <p class="card__eyebrow">RAG · LLM Evaluation · Financial NLP</p>
+          <h2 class="card__title">AI Hallucination Detection in Corporate Earnings Analysis</h2>
+          <p class="card__desc">
+            RAG pipeline measuring LLM hallucination rates when answering financial questions drawn from SEC
+            10-K filings across 8 S&amp;P 500 companies and 4 fiscal years (FY2021–FY2024). A confidence-gating
+            mitigation (cosine similarity threshold of 0.65) reduces overall hallucination from 33% to 8% —
+            a 75% reduction — while preserving 95% of answerable accuracy. Residual failures and persistent
+            weak spots are documented in the context of SR 11-7 model risk management.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Anthropic API</span>
+            <span class="tag">OpenAI API</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">RAG</span>
+            <span class="tag">SEC EDGAR</span>
+            <span class="tag">LLM Evaluation</span>
+            <span class="tag">Financial NLP</span>
+          </div>
+          <div class="card__footer">
+            <a class="card__link"
+               href="https://github.com/pd0765/rag-earnings-hallucination"
+               target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+        </article>
+
       </div>
       <!-- /projects-grid -->
 
